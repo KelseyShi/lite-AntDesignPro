@@ -75,7 +75,7 @@ export default defineConfig({
    */
   title: 'Ant Design Pro',
   layout: {
-    locale: true,
+    locale: false,
     ...defaultSettings,
   },
   /**
@@ -91,10 +91,10 @@ export default defineConfig({
    * @name 国际化插件
    * @doc https://umijs.org/docs/max/i18n
    */ /**
- * @name antd 插件
- * @description 内置了 babel import 插件
- * @doc https://umijs.org/docs/max/antd#antd
- */
+* @name antd 插件
+* @description 内置了 babel import 插件
+* @doc https://umijs.org/docs/max/antd#antd
+*/
   antd: {},
   /**
    * @name 网络请求配置
