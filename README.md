@@ -1,6 +1,6 @@
 # Ant Design Pro
 
-This project is initialized with [Ant Design Pro](https://pro.ant.design). Follow is the quick guide for how to use.
+ [Ant Design Pro](https://pro.ant.design) 自用精简版
 
 
 # 精简内容
@@ -21,5 +21,16 @@ This project is initialized with [Ant Design Pro](https://pro.ant.design). Follo
 * openapi
 * test 自动化测试
 * swagger
+* *登录页三方登录*
+* *欢迎页、二级管理页文案*
+
+## v3
+
+* gh-pages
+* i18n 国际化
+* openapi
+* test 自动化测试
+* swagger
 * 登录页三方登录
 * 欢迎页、二级管理页文案
+* *删除没有用上的mock数据*
