@@ -5,7 +5,7 @@ This project is initialized with [Ant Design Pro](https://pro.ant.design). Follo
 
 # 精简内容
 
-## feature/v1
+## v1
 
 * gh-pages
 * i18n 国际化
@@ -13,3 +13,13 @@ This project is initialized with [Ant Design Pro](https://pro.ant.design). Follo
 * test 自动化测试
 * swagger
 
+
+## v2
+
+* gh-pages
+* i18n 国际化
+* openapi
+* test 自动化测试
+* swagger
+* 登录页三方登录
+* 欢迎页、二级管理页文案
