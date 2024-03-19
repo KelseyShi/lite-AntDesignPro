@@ -77,7 +77,7 @@ const InfoCard: React.FC<{
         {desc}
       </div>
       <a href={href} target="_blank" rel="noreferrer">
-        了解更多 {'>'}
+        了解更多
       </a>
     </div>
   );

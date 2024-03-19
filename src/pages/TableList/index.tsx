@@ -132,7 +132,7 @@ const TableList: React.FC = () => {
       dataIndex: 'callNo',
       sorter: true,
       hideInForm: true,
-      renderText: (val: string) => `${val}${'万'}`,
+      renderText: (val: string) => `${val}万`,
     },
     {
       title: '状态',
@@ -168,7 +168,7 @@ const TableList: React.FC = () => {
           return false;
         }
         if (`${status}` === '3') {
-          return <Input {...rest} placeholder={'请输入异常原因！'} />;
+          return <Input {...rest} placeholder='请输入异常原因！' />;
         }
         return defaultRender(item);
       },
@@ -196,7 +196,7 @@ const TableList: React.FC = () => {
   return (
     <PageContainer>
       <ProTable<API.RuleListItem, API.PageParams>
-        headerTitle={'查询表格'}
+        headerTitle='查询表格'
         actionRef={actionRef}
         rowKey="key"
         search={{
@@ -225,14 +225,14 @@ const TableList: React.FC = () => {
         <FooterToolbar
           extra={
             <div>
-              已选择{' '}
+              已选择
               <a
                 style={{
                   fontWeight: 600,
                 }}
               >
                 {selectedRowsState.length}
-              </a>{' '}
+              </a>
               项 &nbsp;&nbsp;
               <span>
                 服务调用次数总计 {selectedRowsState.reduce((pre, item) => pre + item.callNo!, 0)} 万
@@ -253,7 +253,7 @@ const TableList: React.FC = () => {
         </FooterToolbar>
       )}
       <ModalForm
-        title={'新建规则'}
+        title='新建规则'
         width="400px"
         open={createModalOpen}
         onOpenChange={handleModalOpen}

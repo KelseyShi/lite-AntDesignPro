@@ -17,7 +17,6 @@ import {
 } from '@ant-design/pro-components';
 import { history, useModel, Helmet } from '@umijs/max';
 import { Alert, message, Tabs } from 'antd';
-import Settings from '../../../../config/defaultSettings';
 import React, { useState } from 'react';
 import { flushSync } from 'react-dom';
 import { createStyles } from 'antd-style';
@@ -32,17 +31,6 @@ const useStyles = createStyles(({ token }) => {
       transition: 'color 0.3s',
       '&:hover': {
         color: token.colorPrimaryActive,
-      },
-    },
-    lang: {
-      width: 42,
-      height: 42,
-      lineHeight: '42px',
-      position: 'fixed',
-      right: 16,
-      borderRadius: token.borderRadius,
-      ':hover': {
-        backgroundColor: token.colorBgTextHover,
       },
     },
     container: {
@@ -65,10 +53,6 @@ const ActionIcons = () => {
       <WeiboCircleOutlined key="WeiboCircleOutlined" className={styles.action} />
     </>
   );
-};
-const Lang = () => {
-  const { styles } = useStyles();
-  return;
 };
 const LoginMessage: React.FC<{
   content: string;
@@ -129,10 +113,9 @@ const Login: React.FC = () => {
     <div className={styles.container}>
       <Helmet>
         <title>
-          {'登录'}- {Settings.title}
+          登录
         </title>
       </Helmet>
-      <Lang />
       <div
         style={{
           flex: '1',
@@ -146,7 +129,7 @@ const Login: React.FC = () => {
           }}
           logo={<img alt="logo" src="/logo.svg" />}
           title="Ant Design"
-          subTitle={'Ant Design 是西湖区最具影响力的 Web 设计规范'}
+          subTitle='Ant Design 是西湖区最具影响力的 Web 设计规范'
           initialValues={{
             autoLogin: true,
           }}
@@ -172,7 +155,7 @@ const Login: React.FC = () => {
           />
 
           {status === 'error' && loginType === 'account' && (
-            <LoginMessage content={'错误的用户名和密码(admin/ant.design)'} />
+            <LoginMessage content='错误的用户名和密码(admin/ant.design)' />
           )}
           {type === 'account' && (
             <>
@@ -182,7 +165,7 @@ const Login: React.FC = () => {
                   size: 'large',
                   prefix: <UserOutlined />,
                 }}
-                placeholder={'用户名: admin or user'}
+                placeholder='用户名: admin or user'
                 rules={[
                   {
                     required: true,
@@ -196,7 +179,7 @@ const Login: React.FC = () => {
                   size: 'large',
                   prefix: <LockOutlined />,
                 }}
-                placeholder={'密码: ant.design'}
+                placeholder='密码: ant.design'
                 rules={[
                   {
                     required: true,
@@ -216,7 +199,7 @@ const Login: React.FC = () => {
                   prefix: <MobileOutlined />,
                 }}
                 name="mobile"
-                placeholder={'请输入手机号！'}
+                placeholder='请输入手机号！'
                 rules={[
                   {
                     required: true,
@@ -236,10 +219,10 @@ const Login: React.FC = () => {
                 captchaProps={{
                   size: 'large',
                 }}
-                placeholder={'请输入验证码！'}
+                placeholder='请输入验证码！'
                 captchaTextRender={(timing, count) => {
                   if (timing) {
-                    return `${count} ${'秒后重新获取'}`;
+                    return `${count} 秒后重新获取`;
                   }
                   return '获取验证码';
                 }}
